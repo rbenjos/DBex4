@@ -1,0 +1,1021 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+מסדי נתונים - תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Join Algorithms
+\end_layout
+
+\begin_layout Author
+מיכל לוי -
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+313573743
+\end_layout
+
+\begin_layout Author
+רועי בן יוסף -
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+307920116
+\end_layout
+
+\begin_layout Part*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+א.
+ עלות החישוב של 
+\begin_inset Formula $BNL$
+\end_inset
+
+ היא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B(Movies)+B(PlaysIn)\cdot\left\lceil \frac{B(Movies)}{M-2}\right\rceil 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נחשב את כל אחד מהאלמנטים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B(Movies)=\frac{T(Movies)}{\left\lfloor \frac{8192}{36}\right\rfloor }=\left\lceil \frac{10000}{227}\right\rceil =45
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B(PlaysIn)=\frac{T(PlaysIn)}{\left\lfloor \frac{8192}{18}\right\rfloor }=\left\lceil \frac{100000}{445}\right\rceil =220
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M=15
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ולכן עלות החישוב היא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+45+220\cdot\left\lceil \frac{45}{13}\right\rceil =925
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר 
+\begin_inset Formula $925$
+\end_inset
+
+ פעולות 
+\begin_inset Formula $IO$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ב.
+ התנאי לקיום אלגוריתם 
+\begin_inset Formula $Hash-Join$
+\end_inset
+
+ הוא :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{14}\right\rceil \leq13\,\,\,\vee\,\,\,\left\lceil \frac{B(PlaysIn)}{14}\right\rceil \leq13
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ומתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{45}{14}\right\rceil =4\leq13
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר ניתן לבצע את האלגוריתם.
+\end_layout
+
+\begin_layout Standard
+עלות החישוב של 
+\begin_inset Formula $Hash-Join$
+\end_inset
+
+ היא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+3B(Movies)+3B(PlaysIn)=3\cdot45+3\cdot220=795
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ג.
+ התנאי לקיום אלגוריתם 
+\begin_inset Formula $Sort-Merge-Join$
+\end_inset
+
+ הוא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{15}\right\rceil <15\,\,\,\land\,\,\,\left\lceil \frac{B(PlaysIn)}{15}\right\rceil <15
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ומתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{15}\right\rceil =3<15
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אך:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(PlaysIn)}{15}\right\rceil =15\cancel{<}15
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר לא ניתן לממש אלגוריתם 
+\begin_inset Formula $Sort-Merge-Join$
+\end_inset
+
+ על הטבלאות הבאות.
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+2
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+א.
+ כעת 
+\begin_inset Formula $M-2=14$
+\end_inset
+
+ לכן עלות החישוב החדשה תהיה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+45+220\cdot\left\lceil \frac{45}{14}\right\rceil =925=45+220\cdot\left\lceil \frac{45}{13}\right\rceil 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר אינה משתנה כלל
+\end_layout
+
+\begin_layout Standard
+ב.
+ נוסחת עלות החישוב של 
+\begin_inset Formula $HJ$
+\end_inset
+
+ אינה כוללת התייחסות ל
+\begin_inset Formula $M$
+\end_inset
+
+.
+ ומכיוון שהאלגוריתם היה בר מימוש 
+\end_layout
+
+\begin_layout Standard
+כאשר 
+\begin_inset Formula $M=15$
+\end_inset
+
+ הוא גם יהיה בר מימוש כאשר 
+\begin_inset Formula $M=16$
+\end_inset
+
+.
+ לכן אין שינוי.
+\end_layout
+
+\begin_layout Standard
+ג.
+ התנאי לקיום אלגוריתם 
+\begin_inset Formula $Sort-Merge-Join$
+\end_inset
+
+ הוא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{16}\right\rceil <16\,\,\,\land\,\,\,\left\lceil \frac{B(PlaysIn)}{16}\right\rceil <16
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ואכן מתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{16}\right\rceil =3<16
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(PlaysIn)}{16}\right\rceil =14<16
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נבדוק אם מתקיים התנאי לאלגוריתם 
+\begin_inset Formula $SMJ$
+\end_inset
+
+ 
+\series bold
+יעיל
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{16}\right\rceil +\left\lceil \frac{B(PlaysIn)}{16}\right\rceil <16
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+3+14=17
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר לא קיים אלגוריתם 
+\series bold
+יעיל
+\series default
+, לכן עלות האלגוריתם תהיה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+5B(Movies)+5B(PlaysIn)=5\cdot45+5\cdot220=1325
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+3
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+א.
+ בכל מצב, גודל החוצץ הנדרש ל-
+\begin_inset Formula $BNL$
+\end_inset
+
+ הוא 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ בלוק אחד ליחס החיצוני, בלוק אחד ליחס הפנימי,
+\end_layout
+
+\begin_layout Standard
+ובלוק אחד לפלט.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ב.
+ עבור 
+\begin_inset Formula $HJ$
+\end_inset
+
+ נדרוש שיתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{M-1}\right\rceil \leq M-2\,\,\,\vee\,\,\,\left\lceil \frac{B(PlaysIn)}{M-1}\right\rceil \leq M-2\,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הטבלה 
+\begin_inset Formula $Movies$
+\end_inset
+
+ כוללת פחות בלוקים, ולכן ניתן להתייחס רק אליה, מכיוון שאם 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,\left\lceil \frac{B(PlaysIn)}{M-1}\right\rceil \leq M-2$
+\end_inset
+
+ מתקיים, אז גם 
+\begin_inset Formula $\left\lceil \frac{B(Movies)}{M-1}\right\rceil \leq M-2$
+\end_inset
+
+ מתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{M-1}\right\rceil =\left\lceil \frac{45}{M-1}\right\rceil \leq M-2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נפתור ונראה כי עבור 
+\begin_inset Formula $M=9$
+\end_inset
+
+ מתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{45}{M-1}\right\rceil =6\leq7=M-2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ג.
+ עבור 
+\begin_inset Formula $SMJ$
+\end_inset
+
+ נדרוש שיתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{M}\right\rceil <M\,\,\,\land\,\,\,\left\lceil \frac{B(PlaysIn)}{M}\right\rceil <M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הטבלה 
+\begin_inset Formula $PlaysIn$
+\end_inset
+
+ כוללת יותר בלוקים, לכן ניתן להתייחס רק אליה.
+\end_layout
+
+\begin_layout Standard
+כלומר נפתור רק את:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(PlaysIn)}{M}\right\rceil <M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כבר בסעיף הקודם ראינו כי עבור 
+\begin_inset Formula $M=15$
+\end_inset
+
+ לא מתקיים התנאי, ועבור 
+\begin_inset Formula $M=16$
+\end_inset
+
+ מתקיים.
+\end_layout
+
+\begin_layout Standard
+לכן 
+\begin_inset Formula $M=16$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ד.
+ התנאי לקיום אלגוריתם 
+\begin_inset Formula $SMJ$
+\end_inset
+
+ יעיל הוא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{M}\right\rceil +\left\lceil \frac{B(PlaysIn)}{M}\right\rceil <M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ראינו בסעיף הקודם כי עבור 
+\begin_inset Formula $M=16$
+\end_inset
+
+ התנאי אינו מתקיים.
+\end_layout
+
+\begin_layout Standard
+עבור 
+\begin_inset Formula $M=17$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(Movies)}{17}\right\rceil +\left\lceil \frac{B(PlaysIn)}{17}\right\rceil =13+3=16<17=M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר הגודל המינימלי הוא 
+\begin_inset Formula $M=17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Standard
+נתון:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B(R)=300,\,B(S)=1000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(R)=300\cdot100=30,000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(S)=1000\cdot50=50,000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V(R,B)=100,\,V(S,C)=200
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M=10
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+א.
+\end_layout
+
+\begin_layout Standard
+ב.
+\end_layout
+
+\begin_layout Standard
+ג.
+\end_layout
+
+\begin_layout Standard
+ד.
+\end_layout
+
+\begin_layout Standard
+ה.
+\end_layout
+
+\begin_layout Part*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\end_layout
+
+\begin_layout Part*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\end_layout
+
+\end_body
+\end_document
