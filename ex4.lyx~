@@ -932,19 +932,212 @@ M=10
 \end_layout
 
 \begin_layout Standard
+א.
+ למדנו שהערכת מספר השורות המתאימות לביטוי זה היא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{T(S)}{V(S,C)}=\frac{50000}{200}=250
+\]
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-א.
+ולכן מספר הבלוקים יהיה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{250}{50}\right\rceil =5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר נזדקק ל-
+\numeric on
+5
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בלוקים.
 \end_layout
 
 \begin_layout Standard
 ב.
+ במקרה זה אנו לא יודעים את הטווח של 
+\begin_inset Formula $A$
+\end_inset
+
+ , ולכן הכלל לחישוב מספר השורות המתאימות לביטוי הוא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{T(R)}{3}=\frac{30000}{3}=10000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר מספר הבלוקים הוא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{10000}{100}\right\rceil =100
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר נזדקק ל-
+\numeric on
+100
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בלוקים
 \end_layout
 
 \begin_layout Standard
 ג.
+ 
+\end_layout
+
+\begin_layout Standard
+לצורך החישוב ניזכר כי 
+\begin_inset Formula $B$
+\end_inset
+
+ הוא מפתח ב-
+\begin_inset Formula $S$
+\end_inset
+
+, לכן:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V(S,B)=T(S)=50000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בסך הכל מספר השורות המתאימות לביטוי 
+\begin_inset Formula $\sigma_{A<10\wedge C=8}(R(A,B)\bowtie S(B,C))$
+\end_inset
+
+ יהיה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{T(R)\cdot T(S)}{V(S,C)\cdot\max\{V(R,B),V(S,B)\}\cdot3}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{50000\cdot30000}{200\cdot50000\cdot3}=50
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר 
+\begin_inset Formula $50$
+\end_inset
+
+ שורות שונות.
 \end_layout
 
 \begin_layout Standard
@@ -984,6 +1177,276 @@ M=10
 \noun default
 \color inherit
 3
+\end_layout
+
+\begin_layout Standard
+נתון:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B(S)=1200,\,\,B(R)=4000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+גודל בלוק הוא 
+\begin_inset Formula $2000$
+\end_inset
+
+ בתים
+\end_layout
+
+\begin_layout Standard
+גודל שורה ב-
+\begin_inset Formula $S$
+\end_inset
+
+ הוא 
+\begin_inset Formula $30$
+\end_inset
+
+ בתים
+\end_layout
+
+\begin_layout Standard
+גודל שורה ב-
+\begin_inset Formula $R$
+\end_inset
+
+ הוא 
+\begin_inset Formula $20$
+\end_inset
+
+ בתים
+\end_layout
+
+\begin_layout Standard
+בלוק יחיד ב
+\begin_inset Formula $S$
+\end_inset
+
+ מכיל 
+\begin_inset Formula $\left\lfloor \frac{2000}{30}\right\rfloor $
+\end_inset
+
+ שורות, כלומר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $66$
+\end_inset
+
+ שורות.
+ לכן:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(S)=1200\cdot66=79200
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בלוק יחיד ב
+\begin_inset Formula $R$
+\end_inset
+
+ מכיל 
+\begin_inset Formula $\left\lfloor \frac{2000}{20}\right\rfloor $
+\end_inset
+
+ שורות, כלומר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $100$
+\end_inset
+
+ שורות.
+ לכן:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(R)=4000\cdot100=400000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V(S,A)=1000,\,V(R,A)=400000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V(R,B)=10
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M=70
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+א.
+ מספר השורות בתוצאת הביטוי 
+\begin_inset Formula $\pi_{A,D}\sigma_{B=20\wedge D<5}(R(A,B)\bowtie S(A,C,D))$
+\end_inset
+
+ יהיה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{T(S)\cdot T(R)}{\max\{V(R,A),V(S,A)\}\cdot V(R,B)\cdot3}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{79200\cdot400000}{400000\cdot10\cdot3}=2640
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר יהיו 
+\begin_inset Formula $2640$
+\end_inset
+
+ שורות.
+\end_layout
+
+\begin_layout Standard
+ב.
+ כל שורה מכילה את האטריביוטים 
+\begin_inset Formula $A,D$
+\end_inset
+
+ .
+ כל אחד מהם שוקל 
+\begin_inset Formula $10$
+\end_inset
+
+ בתים.
+ כלומר גודל שורה בביטוי
+\end_layout
+
+\begin_layout Standard
+יהיה 
+\begin_inset Formula $20$
+\end_inset
+
+ בתים.
+\end_layout
+
+\begin_layout Standard
+לכן כל בלוק יכיל 
+\begin_inset Formula $\left\lfloor \frac{2000}{20}\right\rfloor =100$
+\end_inset
+
+ שורות, ולכן נידרש ל 
+\begin_inset Formula $\left\lceil \frac{2640}{100}\right\rceil =27$
+\end_inset
+
+ בלוקים.
+\end_layout
+
+\begin_layout Standard
+כלומר גודל התוצאה יהיה 
+\begin_inset Formula $27$
+\end_inset
+
+ בלוקים.
 \end_layout
 
 \begin_layout Part*
