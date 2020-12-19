@@ -1142,17 +1142,449 @@ a_{b}
 
 \begin_layout Standard
 ד.
+ נחשב את עלות החישוב עבור כל אלגוריתם צירוף שלמדנו עליו, נבצע את הבחירה
+ לפני הצירוף בכל אחד מהם ע
+\begin_inset Quotes erd
+\end_inset
+
+מ לצמצם עלויות:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+קודם כל נגדיר את היחסים המסוננים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{A}=\sigma_{A<10}R(A,B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{C}=\sigma_{C=8}S(B,C)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+עלות הביצוע של 
+\begin_inset Formula $\sigma_{C=8}S(B,C)$
+\end_inset
+
+ היא או 
+\begin_inset Formula $B(S)=1000$
+\end_inset
+
+ או עלות הגישה באמצעות האינדקס.
+\end_layout
+
+\begin_layout Standard
+מכיוון שהשימוש באינדקס עצמו זניח, עלות הגישה היא בסך הכל עלות שליפת הבלוק
+ לכל שורה המתאימה לתנאי, כלומר 
+\begin_inset Formula $T(S_{C})=250$
+\end_inset
+
+, לכן נשתמש באינדקס.
+\end_layout
+
+\begin_layout Standard
+ע
+\begin_inset Quotes erd
+\end_inset
+
+מ ליצור את 
+\begin_inset Formula $R_{A}$
+\end_inset
+
+נשתמש ב-
+\begin_inset Formula $full\,table\,scan$
+\end_inset
+
+ מכיוון שאין אינדקס על 
+\begin_inset Formula $A$
+\end_inset
+
+ , לכן עלות החישוב
+\end_layout
+
+\begin_layout Standard
+של היחס 
+\begin_inset Formula $R_{A}$
+\end_inset
+
+ היא 
+\begin_inset Formula $B(R)=300$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נחשב עבור כל אלגוריתם:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{BNL}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Read(S_{C})+Read(R_{A})\cdot\left\lceil \frac{B(S_{C})}{M-2}\right\rceil 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+250+300\cdot\left\lceil \frac{5}{8}\right\rceil =550
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר העלות היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
  
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+550
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{INL}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+עלות החישוב של 
 \begin_inset Formula $INL$
 \end_inset
 
- , 
-\series bold
-צריך לפרט!!
+ תלויה במספר השורות ביחס הפנימי )עליו יש אינדקס(,
+\end_layout
+
+\begin_layout Standard
+עלות החישוב תהיה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Read(R_{A})+T(R_{A})\cdot(cost\,of\,select)=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מזניחות הגישה לאינדקס:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+300+10000\cdot(1)=10300
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לכן עלות החישוב תהיה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10300
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{HJ}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+תחילה נבדוק אם מתקיים התנאי לשימוש באלגוריתם:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(R_{A})}{M-1}\right\rceil \leq M-2\,\,\,\vee\,\,\,\left\lceil \frac{B(S_{C})}{M-1}\right\rceil \leq M-2\,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{100}{9}\right\rceil \leq8\,\,\,\vee\,\,\,\left\lceil \frac{5}{9}\right\rceil \leq8\,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+התנאי מתקיים ולכן ניתן להשתמש.
+\end_layout
+
+\begin_layout Standard
+עלות החישוב של 
+\begin_inset Formula $HJ$
+\end_inset
+
+ היא :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Read(R)+Read(S)+2\cdot B(R_{A})+2\cdot B(S_{C})=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+300+250+200+10=760
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר עלות החישוב היא 
+\begin_inset Formula $760$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{SMJ}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+לא נחשב מכיוון שגם במקרה הטוב ביותר, עלות החישוב תהיה זהה לזאת של 
+\begin_inset Formula $HJ$
+\end_inset
+
+, ולכן
+\end_layout
+
+\begin_layout Standard
+לא אופטימלית.
+\end_layout
+
+\begin_layout Standard
+ראינו שהתכנית היעילה ביותר היא 
+\begin_inset Formula $BNL$
+\end_inset
+
+.
+ להל
+\begin_inset Quotes erd
+\end_inset
+
+ן תכנית השאילתה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted3.png
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 ה.
+\end_layout
+
+\begin_layout Standard
+כמו שחישבנו בסעיף הקודם, עלות החישוב של תכנית השאילתה היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+550
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פעולות 
+\begin_inset Formula $IO$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part*
@@ -1456,6 +1888,316 @@ M=70
  בלוקים.
 \end_layout
 
+\begin_layout Standard
+ג.נחשב את עלות החישוב עבור כל אלגוריתם צירוף שלמדנו עליו, נבצע את הבחירה
+ לפני הצירוף בכל אחד מהם ע
+\begin_inset Quotes erd
+\end_inset
+
+מ לצמצם עלויות, בנוסף, נבצע הטלות מוקדמות במידת הצורך:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+קודם כל נגדיר את היחסים המסוננים לאחר הטלות:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{B}=\pi_{A}\sigma_{B=20}R(A,B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{D}=\pi_{A,D}\sigma_{D<5}S(A,C,D)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נחשב את מספר הבלוקים עבור 
+\begin_inset Formula $R_{B},S_{D}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B(R_{B})=\frac{400000}{10\cdot\left\lceil \frac{2000}{10}\right\rceil }=200
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B(S_{D})=\frac{79200}{3\cdot\left\lceil \frac{2000}{20}\right\rceil }=\frac{79200}{300}=264
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נחשב עבור כל אלגוריתם:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{BNL}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Read(R_{B})+Read(S_{D})\cdot\left\lceil \frac{B(R_{B})}{M-2}\right\rceil 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+4000+1200\cdot\left\lceil \frac{200}{70-2}\right\rceil =7600
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר העלות היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+7600
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{INL}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+לא קיים אינדקס ולכן לא נחשב.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{HJ}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+תחילה נבדוק אם מתקיים התנאי לשימוש באלגוריתם:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{B(R_{B})}{M-1}\right\rceil \leq M-2\,\,\,\vee\,\,\,\left\lceil \frac{B(S_{D})}{M-1}\right\rceil \leq M-2\,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \frac{200}{69}\right\rceil \leq68\,\,\,\vee\,\,\,\left\lceil \frac{264}{69}\right\rceil \leq68\,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+התנאי מתקיים ולכן ניתן להשתמש.
+\end_layout
+
+\begin_layout Standard
+עלות החישוב של 
+\begin_inset Formula $HJ$
+\end_inset
+
+ היא :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Read(R)+Read(S)+2\cdot B(R_{B})+2\cdot B(S_{D})=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+4000+1200+2\cdot200+2\cdot264=6128
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר עלות החישוב היא 
+\begin_inset Formula $6128$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{SMJ}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+גם במידה ומתקיים התנאי לחישוב יעיל של 
+\begin_inset Formula $SMJ$
+\end_inset
+
+, עלות החישוב שלו תהיה זהה ל
+\begin_inset Formula $HJ$
+\end_inset
+
+ , ולכן נעדיף להשתמש ב-
+\begin_inset Formula $HJ$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר ראינו שהדרך האופטימלית לחישוב השאילתה היא 
+\begin_inset Formula $HJ$
+\end_inset
+
+ , להלן תכנית השאילתה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ד.
+\end_layout
+
+\begin_layout Standard
+כמו שחישבנו בסעיף ג' , עלות החישוב היא 
+\begin_inset Formula $6128$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Part*
 שאלה
 \family roman
@@ -1485,6 +2227,236 @@ M=70
 \noun default
 \color inherit
 4
+\end_layout
+
+\begin_layout Standard
+א.
+ לשאילתה לקח יותר מ-
+\numeric on
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ דקות לרוץ.
+\end_layout
+
+\begin_layout Standard
+תכנון השאילתה להלן:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ב.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+זמן הריצה כולל תכנון הוא כ
+\begin_inset Formula $150.9$
+\end_inset
+
+ מילישניות.
+\end_layout
+
+\begin_layout Standard
+בשאילתה הראשונה ערכנו 
+\begin_inset Formula $full\,table\,scan$
+\end_inset
+
+ לכל איבר ב-
+\begin_inset Formula $M1$
+\end_inset
+
+ , כלומר למעשה עשינו מכפלה קרטזית, ורק אז סיננון.
+\end_layout
+
+\begin_layout Standard
+בשאילתה השנייה, קודם כל סיננו, ורק אז התאמנו את השורות המאימות לאורך הסרט
+ ולשנה.
+\end_layout
+
+\begin_layout Standard
+ג.
+ ניתן להשתמש באינדקסים הבאים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+(year)\\
+(duration)\\
+(year,duration)\\
+(duration,year)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מתוכם, נראה שאלה שיועילו יותר יהיו 
+\begin_inset Formula 
+\[
+(year,duration),(duration,year)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מכיוון שהם מספקים גישה מהירה גם לשנה וגם למשך הסרט, המידע הדרוש לנו בעצם.
+\end_layout
+
+\begin_layout Standard
+שימוש באינדקס 
+\begin_inset Formula $(year,duration)$
+\end_inset
+
+ האיץ את ביצוע השאילתה בערך פי 
+\begin_inset Formula $2$
+\end_inset
+
+ באופן עקבי:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted6.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+שימוש באינדקס 
+\begin_inset Formula $(duration,year)$
+\end_inset
+
+ האיץ את ביצוע השאילתה באופן דומה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted5.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נציין גם כי שימוש באינדקסים 
+\begin_inset Formula $(year),(duration)$
+\end_inset
+
+ האיץ רק במידה מועטת את ביצוע השאילתה )סדר גודל של כ-
+\numeric on
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ אחוזים לכל אחד מהם(
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נוכל להסביר את ההפרש בזמני הריצה בצורה הבאה:
+\end_layout
+
+\begin_layout Standard
+האינדקס 
+\begin_inset Formula $(year,duration)$
+\end_inset
+
+ )שחשבנו שיהיה היעיל ביותר( מאפשר לנו לגשת בקלות לסרט שיצא בשנה נתונה, ומכיוון
+ שהסידור המשני יהיה ע
+\begin_inset Quotes erd
+\end_inset
+
+פ 
+\begin_inset Formula $duration$
+\end_inset
+
+, לכל שנה הסרט בעל האורך המינימלי, יהיה הראשון בכל קבוצה של שנה מסוימת.
+ כלומר אם נחפש סרט שיצא בשנה נתונה, הסרט הראשון שניתקל בו, יהיה הסרט בעל
+ האורך המינימלי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+האינדקס 
+\begin_inset Formula $(duration,year)$
+\end_inset
+
+ מאפשר לנו לגשת בצורה מהירה לסרט בעל האורך המינימלי בשנה נתונה, מכיוון שאנו
+ מסדרים את האינקס קודם כל לפי משך הסרט, נצפה למצוא את כל הסרטים בעלי האורך
+ המינמלי בקיצון הקבוצה.
+ ביצועיו היו טובים באופן מפתיע, חזינו שהוא יתפקד משמעותית פחות טוב מהאינדקס
+ על 
+\begin_inset Formula $(year,duration)$
+\end_inset
+
+.
 \end_layout
 
 \end_body
